@@ -46,6 +46,9 @@ tl.to('.box2' , 1 , {
 document.getElementById('play').onclick = function () {
    tl.play();
 }
+document.getElementById('pause').onclick = function () {
+    tl.pause();
+ }
 
 
 

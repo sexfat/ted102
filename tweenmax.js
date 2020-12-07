@@ -20,7 +20,6 @@ var tl = new TimelineMax({
   repeat: 1,
   yoyo: true,
   onComplete : alerts //callback
-
 });
 
 tl.stop();
@@ -48,6 +47,10 @@ document.getElementById('play').onclick = function () {
 }
 document.getElementById('pause').onclick = function () {
     tl.pause();
+ }
+
+ document.getElementById('reverse').onclick = function () {
+    tl.reverse();
  }
 
 

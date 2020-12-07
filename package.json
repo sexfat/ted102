@@ -1,0 +1,24 @@
+{
+  "name": "ted102",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tweenmax.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sexfat/ted102.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sexfat/ted102/issues"
+  },
+  "homepage": "https://github.com/sexfat/ted102#readme",
+  "dependencies": {
+    "gsap": "^3.5.1",
+    "jquery": "^3.5.1"
+  }
+}

@@ -16,10 +16,20 @@ TweenMax.to('.box1', 2, {
 });
 
 var tl  = new TimelineMax({
-  repeat: -1,
-  yoyo: true
+  repeat: 1,
+  yoyo: true,
+  onComplete : alerts //callback
 
 });
+
+function alerts(){
+    // alert('完成')
+    TweenMax.to('body' , 1 ,{
+        backgroundColor : '#f20'
+    })  
+} 
+
+
 
 tl.to('.box2' , 1 , {
     x: 600

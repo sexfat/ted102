@@ -14,3 +14,21 @@ body {
     padding: 5px 30px;
     border-radius: 4px;
 }
+
+.bar {
+   width: 40px;
+   height: 5px;
+   background-color: #fff; 
+   /* position: relative; */
+   /* left : -50px; */
+}
+
+#nav {
+    cursor: pointer;
+}
+.top {
+   margin-bottom: 10px; 
+}
+.bottom {
+    margin-top: 10px;
+}

@@ -58,11 +58,12 @@ var tlnav = new TimelineMax();
 
 
 tlnav.to('.top', .3, {
-    width: '60px'
+    width: '60px',
+    backgroundColor : '#f20'
 }).to('.middle', .4, {
-     width: '80px'
+     width: '80px',
 }).to('.bottom' , .6 , {
-    width: '55px'
+    width: '55px',
 })
 
 tlnav.stop();

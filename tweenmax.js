@@ -15,21 +15,23 @@ TweenMax.to('.box1', 2, {
     // ease: Bounce.easeOut
 });
 
-var tl  = new TimelineMax({
+
+var tl = new TimelineMax({
   repeat: 1,
   yoyo: true,
   onComplete : alerts //callback
 
 });
 
+tl.stop();
+
 function alerts(){
-    // alert('完成')
+
     TweenMax.to('body' , 1 ,{
         backgroundColor : '#f20'
-    })  
-} 
-
-
+    });
+    // alert('背景變色');  
+}
 
 tl.to('.box2' , 1 , {
     x: 600
@@ -39,7 +41,11 @@ tl.to('.box2' , 1 , {
     x: 400
 }).to('.box3' , 1 , {
     rotation : 360
-})
+});
+
+document.getElementById('play').onclick = function () {
+   tl.play();
+}
 
 
 

@@ -9,3 +9,8 @@ body {
     background-color: #00ffaa;
    
 }
+
+.btn {
+    padding: 5px 30px;
+    border-radius: 4px;
+}

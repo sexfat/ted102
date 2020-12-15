@@ -37,6 +37,7 @@
     <section class="gray">
           <div class="box box01">001</div>
     </section>
+    
     <section></section>
     <section class="gray"></section>
     
@@ -52,10 +53,12 @@
    })
 //觸發事件
     new ScrollMagic.Scene({
-        triggerElement : '#trigger01'  //觸發點
+        triggerElement : '#trigger01',  //觸發點
+        offset: 100
     }).setTween(mv01) //動畫
     .addIndicators({
         name : 'key01',
+        colorStart : '#f20'
         
     }) 
     .addTo(controller)

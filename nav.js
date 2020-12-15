@@ -6,12 +6,14 @@ var tl =  new TimelineMax();
 tl.to('nav' , 1 , {
     right : 0
 }).to('nav' , 1 , {
-    height: '100vh'
-}).to('nav ul li' , 1 , {
+    height: '100vh',
+    ease: Back.easeOut
+}).staggerTo('nav ul li' , 1 , {
     opacity : 1,
-}).to('.close_bar' , 1 , {
+}, .2).to('.close_bar' , 1 , {
     opacity: 1,
-    pointerEvents : 'all'
+    delay : -.7
+    // pointerEvents : 'all'
 });
 
 tl.stop();

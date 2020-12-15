@@ -60,7 +60,7 @@
     right: 5%;
     cursor: pointer;
     opacity: 0;
-    pointer-events: none;
+    /* pointer-events: none; */
   }
   
   .wrapper nav .close_bar div::before, .wrapper nav .close_bar div::after {
@@ -69,14 +69,17 @@
     width: 30px;
     height: 4px;
     background-color: #000000;
+    cursor: pointer;
   }
   
   .wrapper nav .close_bar div::before {
     transform: rotate(-45deg);
+    cursor: pointer;
   }
   
   .wrapper nav .close_bar div::after {
     transform: rotate(45deg);
+    cursor: pointer;
   }
   
   .bar {

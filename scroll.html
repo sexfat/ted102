@@ -48,7 +48,9 @@
         <div class="box box02">002</div>
     </section>
     <div id="trigger02"></div>
-    <section class="bgc">背景</section>
+    <section class="bgc">背景
+        <div class="box box03">003</div>
+    </section>
     <section class="gray"></section>
 
 </body>
@@ -87,10 +89,17 @@
         .addTo(controller)
 
    // 第二段觸發點
+
+   var mv03  = TweenMax.to('.box03' , 1 , {
+           x: 300,
+           y: 100,
+           
+       });
+
    new ScrollMagic.Scene({
             triggerElement: '#trigger02', //觸發點
             // offset: 100
-        }).setClassToggle('.bgc' , 'blue') //動畫
+        }).setClassToggle('.bgc' , 'blue').setTween(mv03) //找到bgc 物件 動態塞入blue
         .addIndicators({
             name: 'key02',
             colorStart: '#13fe13'

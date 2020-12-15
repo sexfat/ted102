@@ -19,6 +19,7 @@
   "homepage": "https://github.com/sexfat/ted102#readme",
   "dependencies": {
     "gsap": "^2.1.3",
+    "hover-effect": "^1.1.0",
     "jquery": "^3.5.1"
   }
 }

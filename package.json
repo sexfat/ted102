@@ -20,6 +20,7 @@
   "dependencies": {
     "gsap": "^2.1.3",
     "hover-effect": "^1.1.0",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "three": "^0.123.0"
   }
 }

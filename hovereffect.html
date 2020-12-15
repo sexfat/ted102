@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="node_modules/three/build/three.min.js"></script>
+    <script src="node_modules/gsap/src/minified/TweenMax.min.js"></script>
+    <script src="node_modules/hover-effect/dist/hover-effect.umd.js"></script>
+    <title>HoverEffect</title>
+    <style>
+        .app {
+            position: relative;
+            height: 512px;
+            width: 512px;
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+
+    </div>
+
+    <script>
+        var myAnimation = new hoverEffect({
+            parent: document.querySelector('.app'),
+            intensity: 0.3,
+            image1: 'images/ice.jpg',
+            image2: 'images/ice2.jpg',
+            displacementImage: 'images/displacement/10.jpg' 
+            //中間過場圖片 可以置換 displacement 裡的圖片，會有不一樣的效果
+        });
+        
+    </script>
+</body>
+
+</html>

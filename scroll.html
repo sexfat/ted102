@@ -16,6 +16,7 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            color :#13fe13;
         }
 
         section {
@@ -33,6 +34,9 @@
             height: 50px;
             background-color: #13fe13;
         }
+        .bgc.blue {
+            background-color: rgb(39, 39, 255)
+        }
     </style>
 </head>
 
@@ -44,7 +48,7 @@
         <div class="box box02">002</div>
     </section>
     <div id="trigger02"></div>
-    <section></section>
+    <section class="bgc">背景</section>
     <section class="gray"></section>
 
 </body>
@@ -81,14 +85,15 @@
 
         })
         .addTo(controller)
+
    // 第二段觸發點
    new ScrollMagic.Scene({
             triggerElement: '#trigger02', //觸發點
             // offset: 100
-        }).setClassToggle() //動畫
+        }).setClassToggle('.bgc' , 'blue') //動畫
         .addIndicators({
             name: 'key02',
-            colorStart: '#f24'
+            colorStart: '#13fe13'
 
         })
         .addTo(controller)

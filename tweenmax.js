@@ -70,10 +70,12 @@ tlnav.stop();
 
 document.getElementById('nav').onmouseover = function (p) {
     tlnav.play(); 
+    tl.play();
 }
 
 document.getElementById('nav').onmouseleave = function (p) {
     tlnav.reverse(); 
+    tl.reverse();
 }
 
 

@@ -3,16 +3,19 @@ const close  = document.querySelector('.close_bar');
 
 var tl =  new TimelineMax();
 
-tl.to('nav' , 1 , {
-    right : 0
-}).to('nav' , 1 , {
+tl.to('nav' , .5, {
+    right : 0,
+    ease: Power4.easeOut
+    
+}).to('nav' , .5 , {
     height: '100vh',
-    ease: Back.easeOut
-}).staggerTo('nav ul li' , 1 , {
-    opacity : 1,
-}, .2).to('.close_bar' , 1 , {
-    opacity: 1,
+    ease: Power3.easeOut
+}).staggerTo('nav ul li' , .3 , {
+    opacity : 1, 
     delay : -.7
+}, .2).to('.close_bar' , .5 , {
+    opacity: 1,
+    delay : -.5
     // pointerEvents : 'all'
 });
 

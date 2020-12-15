@@ -10,7 +10,8 @@ tl.to('nav' , 1 , {
 }).to('nav ul li' , 1 , {
     opacity : 1,
 }).to('.close_bar' , 1 , {
-    opacity: 1
+    opacity: 1,
+    pointerEvents : 'all'
 });
 
 tl.stop();

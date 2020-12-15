@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,61 +13,74 @@
     <title>scroll</title>
     <style>
         body {
-             margin: 0;
-             padding: 0;
-             overflow-x: hidden;
-         }
-         section {
-             width: 100vw;
-             height: 100vh;
-             background-color: rgb(0, 0, 0);
-         }
-         .gray {
-            background-color: #333; 
-         }
-         .box {
-            width : 150px;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        section {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .gray {
+            background-color: #333;
+        }
+
+        .box {
+            width: 150px;
             height: 50px;
-            background-color: #13fe13; 
-         }
+            background-color: #13fe13;
+        }
     </style>
 </head>
+
 <body>
     <section></section>
     <div id="trigger01"></div>
     <section class="gray">
-          <div class="box box01">001</div>
+        <div class="box box01">001</div>
+        <div class="box box02">002</div>
     </section>
-    
+
     <section></section>
     <section class="gray"></section>
-    
+
 </body>
 <script>
     var controller = new ScrollMagic.Controller();
 
 
-  //執行動畫  
-    var mv01 = TweenMax.to('.box01' , 1 , {
-       x: 300,
-       y: 100
-   })
-//觸發事件
+    //執行動畫  
+    var tl = new TimelineMax();
+
+    tl.to('.box01', 1, {
+        x: 300,
+        y: 100
+    }).to('.box02', 1, {
+        x: 500,
+        width: '500px'
+    })
+    //     var mv01 = TweenMax.to('.box01' , 1 , {
+    //        x: 300,
+    //        y: 100
+    //    });
+    //    var mv02 = TweenMax.to('.box02' , 1 , {
+    //        x: 500,
+    //        width : '500px',
+    //    });
+    //觸發事件
     new ScrollMagic.Scene({
-        triggerElement : '#trigger01',  //觸發點
-        offset: 100
-    }).setTween(mv01) //動畫
-    .addIndicators({
-        name : 'key01',
-        colorStart : '#f20'
-        
-    }) 
-    .addTo(controller)
+            triggerElement: '#trigger01', //觸發點
+            offset: 100
+        }).setTween(tl) //動畫
+        .addIndicators({
+            name: 'key01',
+            colorStart: '#f20'
 
-  
-
-
-
-
+        })
+        .addTo(controller)
 </script>
+
 </html>

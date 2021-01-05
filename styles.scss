@@ -7,8 +7,8 @@
 
 //共用
 body {
-    margin: $margin;
-    padding: $null;
+    margin: $zero;
+    padding: $zero;
     font-size:  $fontsize;
     color: map-get( $bg-color, 'red' );
     background-color: map-get( $bg-color, 'green' );
@@ -17,7 +17,18 @@ body {
 //
 
 header {
+    // background-color: rgb(218, 218, 218);
+    @include marginAuto(1200px);
+    h1 {
+        font-size: $h1 ;
+        display: inline-block;
+        span {
+           font-size: 10px;
+           color : #333 
+        }
+    }
     nav {
+        display: inline-block;
         ul {
             list-style: none;
             li {
@@ -26,7 +37,7 @@ header {
                 }
                  display: inline-block;
                  padding: 10px 30px;
-                 background-color: rgb(223, 255, 16);
+                 background-color: rgb(47, 193, 255);
                  cursor: pointer;
                  a {
                      color: map-get( $bg-color, 'link' );
@@ -41,19 +52,14 @@ header {
 }
 
 .wrapper{
-    h1 {
-        font-size: $h1 ;
-        span {
-           font-size: 10px;
-           color : #333 
-        }
-        .title {
-          font-size: 14px;  
-        }
-    }
-
+    @include marginAuto(1200px);
+    background-color: rgb(232, 232, 232);
 }
 
+footer {
+    @include marginAuto(100%);
+    background-color: rgb(228, 228, 228);
+}
 
 .rect {
   @include marginAuto($w);  

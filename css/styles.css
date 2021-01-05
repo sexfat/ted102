@@ -1,10 +1,30 @@
 @charset "UTF-8";
 /* css註解*/
 body {
-  margin: 10px 10px 20px 10px;
+  margin: 0px;
+  padding: 0px;
   font-size: 20px;
   color: #ff1616;
   background-color: #d7ff67;
+}
+
+header {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+header h1 {
+  font-size: 3.6rem;
+  display: inline-block;
+}
+
+header h1 span {
+  font-size: 10px;
+  color: #333;
+}
+
+header nav {
+  display: inline-block;
 }
 
 header nav ul {
@@ -14,7 +34,7 @@ header nav ul {
 header nav ul li {
   display: inline-block;
   padding: 10px 30px;
-  background-color: #dfff10;
+  background-color: #2fc1ff;
   cursor: pointer;
 }
 
@@ -32,17 +52,16 @@ header nav ul li a:hover {
   font-weight: bold;
 }
 
-.wrapper h1 {
-  font-size: 3.6rem;
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: #e8e8e8;
 }
 
-.wrapper h1 span {
-  font-size: 10px;
-  color: #333;
-}
-
-.wrapper h1 .title {
-  font-size: 14px;
+footer {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #e4e4e4;
 }
 
 .rect {

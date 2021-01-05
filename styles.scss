@@ -73,6 +73,17 @@ $w : 960px; //全域變數
     @include marginAuto();//給null
 }
 
+@mixin rect($w , $h:$w){
+    width: $w;
+    height: $h;
+    background-color: rgb(217, 250, 0);
+}
+
+.app2 {
+    @include rect(400px, 300px);
+    background-image: url('./image/..');
+}
+
 
 
 

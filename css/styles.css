@@ -60,4 +60,11 @@ body {
   height: 200px;
   margin: 0 auto;
 }
+
+.app2 {
+  width: 400px;
+  height: 300px;
+  background-color: #d9fa00;
+  background-image: url("./image/..");
+}
 /*# sourceMappingURL=styles.css.map */

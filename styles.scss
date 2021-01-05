@@ -1,0 +1,18 @@
+//變數
+/* css註解*/
+$fontsize : 16px;
+$h1 : 1.2rem;
+$red : #f20;
+$margin: 10px 10px 20px 10px; // list
+
+body {
+    margin: $margin;
+    padding: 0px;
+    font-size:  $fontsize;
+    color: $red;
+    background-color: rgb(215, 255, 103);
+}
+
+h1 {
+    font-size: $h1;
+}

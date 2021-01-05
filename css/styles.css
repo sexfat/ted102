@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* css註解*/
+body {
+  margin: 10px 10px 20px 10px;
+  padding: 0px;
+  font-size: 16px;
+  color: #f20;
+  background-color: #d7ff67;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=styles.css.map */

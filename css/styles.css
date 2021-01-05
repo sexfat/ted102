@@ -83,7 +83,6 @@ footer {
 .app2 {
   width: 400px;
   height: 300px;
-  background-color: #d9fa00;
   background-image: url("./image/..");
 }
 
@@ -97,5 +96,18 @@ footer {
 
 .text {
   font-size: 30px;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: #2a7d00;
+}
+
+.boxline {
+  width: 300px;
+  height: 200px;
 }
 /*# sourceMappingURL=styles.css.map */

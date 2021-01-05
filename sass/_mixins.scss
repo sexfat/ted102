@@ -20,5 +20,4 @@
 @mixin rect($w , $h:$w){
     width: $w;
     height: $h;
-    background-color: rgb(217, 250, 0);
 }

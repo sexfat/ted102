@@ -64,6 +64,17 @@ body {
   @extend %red;
 // @include red();
 }
+.red {
+    background-color: rgb(255, 0, 0);
+}
+.green {
+    background-color: rgb(42, 125, 0);
+}
+
+
+.boxline {
+    @include rect(300px, 200px);
+}
 
 
 

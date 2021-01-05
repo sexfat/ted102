@@ -31,6 +31,10 @@ body {
   cursor: pointer;
 }
 
+.wrapper nav ul li:nth-child(odd) {
+  background-color: #ffba53;
+}
+
 .wrapper nav ul li a {
   color: #333;
   text-decoration: none;

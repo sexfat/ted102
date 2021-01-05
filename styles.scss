@@ -40,6 +40,9 @@ body {
        ul {
            list-style: none;
            li {
+               &:nth-child(odd) {
+                  background-color: #ffba53; 
+               }
                 display: inline-block;
                 padding: 20px 40px;
                 background-color: rgb(223, 255, 16);

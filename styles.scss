@@ -1,16 +1,24 @@
 //變數
 /* css註解*/
 $fontsize : 16px;
-$h1 : 1.2rem;
-$red : #f20;
+$h1 : 1.2rem; //數值
+$red : #f20; //顏色
 $margin: 10px 10px 20px 10px; // list
+$null : null; //null
+$false : false;
+$bg-color :(
+   'red'  : #ff1616,
+   'blue' : #2d5bf3,
+   'green' : #d7ff67
+ );  // map
+
 
 body {
     margin: $margin;
-    padding: 0px;
+    padding: $null;
     font-size:  $fontsize;
-    color: $red;
-    background-color: rgb(215, 255, 103);
+    color: map-get( $bg-color, 'blue' );
+    background-color: map-get( $bg-color, 'green' );
 }
 
 h1 {

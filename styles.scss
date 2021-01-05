@@ -46,6 +46,26 @@ body {
 }
 
 
+.red {
+   color: red 
+}
+
+//佔位
+%red {
+    color: red
+ }
+
+@mixin red(){
+    color: red;
+}
+
+.text {
+  font-size: 30px;
+  @extend %red;
+// @include red();
+}
+
+
 
 
 

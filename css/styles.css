@@ -86,4 +86,16 @@ footer {
   background-color: #d9fa00;
   background-image: url("./image/..");
 }
+
+.red {
+  color: red;
+}
+
+.text {
+  color: red;
+}
+
+.text {
+  font-size: 30px;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -1,7 +1,7 @@
 //變數
 /* css註解*/
 $fontsize : 16px;
-$h1 : 1.2rem; //數值
+$h1 : 2.8rem; //數值
 $red : #f20; //顏色
 $margin: 10px 10px 20px 10px; // list
 $null : null; //null
@@ -17,10 +17,22 @@ body {
     margin: $margin;
     padding: $null;
     font-size:  $fontsize;
-    color: map-get( $bg-color, 'blue' );
+    color: map-get( $bg-color, 'red' );
     background-color: map-get( $bg-color, 'green' );
+    .wrapper-index {
+        h1 {
+            font-size: $h1 ;
+            span {
+               font-size: 10px;
+               color : #333 
+            }
+            .title {
+              font-size: 14px;  
+            }
+        }
+    }
+  
 }
 
-h1 {
-    font-size: $h1;
-}
+
+

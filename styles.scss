@@ -64,17 +64,43 @@ body {
   @extend %red;
 // @include red();
 }
+
+
+//組件寫法
 .red {
     background-color: rgb(255, 0, 0);
 }
 .green {
     background-color: rgb(42, 125, 0);
 }
-
-
 .boxline {
     @include rect(300px, 200px);
 }
+
+// 運算
+
+$wd : 10;
+$xs : 5;
+.boxer {
+  width: $wd + $xs + px;
+  height: 10 - 5 + px;
+  max-width:  100 * 5 + px;
+  font-size: (100 / 50) + px;
+  font : (100 / 20) + px ;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

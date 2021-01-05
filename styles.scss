@@ -106,20 +106,38 @@ $xs : 5;
 $fontBase : 18px;
 
 h1 {
-   font-size : round($fontBase * 4.2 );
+    font-size: round($fontBase * 4.2);
 }
+
 h2 {
-    font-size : round($fontBase * 3.8);
+    font-size: round($fontBase * 3.8);
 }
- h3 {
-    font-size : round($fontBase * 2.6 );
- }
- h4 {
-    font-size : round($fontBase * 1.8 );
- }
+
+h3 {
+    font-size: round($fontBase * 2.6);
+}
+
+h4 {
+    font-size: round($fontBase * 1.8);
+}
 
 
+// $num : 1200;
 
+@mixin layout($num) {
+    @if $num==100 {
+        width: 100%;
+    }
 
+    @else {
+        width: $num + px;
+        @include marginAuto();
+    }
 
+    
+}
+
+.wrapper-inner {
+    @include layout(1366);
+}
 

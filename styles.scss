@@ -49,17 +49,21 @@ body {
 // function name(){ }
 
 //mixin sass 函式
-@mixin marginAuto(){
+$w : 960px; //全域變數
+ 
+
+
+@mixin marginAuto($w){
     margin: 0 auto;
-    width: 1200px;
+    width: $w; //區域變數
 }
 
 .rect {
-  @include marginAuto();  
+  @include marginAuto($w);  
 }
 
 .app {
-    @include marginAuto();
+    @include marginAuto(100%);
 }
 
 

@@ -49,4 +49,10 @@ footer {
   width: 100%;
   background-color: #e4e4e4;
 }
+
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: #e8e8e8;
+}
 /*# sourceMappingURL=product.css.map */

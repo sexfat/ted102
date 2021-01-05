@@ -4,3 +4,9 @@
 @import 'sass/mixins';
 @import 'sass/layout-header';
 @import 'sass/layout-footer';
+
+.wrapper{
+    @include marginAuto(1200px);
+    background-color: rgb(232, 232, 232);
+}
+

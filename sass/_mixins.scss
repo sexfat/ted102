@@ -21,3 +21,13 @@
     width: $w;
     height: $h;
 }
+
+// grid
+@mixin grid($name , $num) {
+    @for $i from 1 through $num {
+        .col-#{$name}-#{$i} {
+            width: ($i / $num) * 100%;
+            display: inline-block;
+        }
+    }
+}

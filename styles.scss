@@ -9,16 +9,16 @@
 body {
     margin: $zero;
     padding: $zero;
-    font-size:  $fontsize;
-    color: map-get( $bg-color, 'red' );
-    background-color: map-get( $bg-color, 'green' );
+    font-size: $fontsize;
+    color: map-get($bg-color, 'red');
+    background-color: map-get($bg-color, 'green');
 }
 
 //header
 @import 'sass/layout-header';
 
 //內容
-.wrapper{
+.wrapper {
     @include marginAuto(1200px);
     background-color: rgb(232, 232, 232);
 }
@@ -28,16 +28,17 @@ body {
 
 
 .rect {
-  @include marginAuto($w);  
+    @include marginAuto($w);
 }
 
 .app {
     @include marginAuto(100%);
 }
+
 //預設值
 .box {
-    @include box(100px , 200px);
-    @include marginAuto();//給null
+    @include box(100px, 200px);
+    @include marginAuto(); //給null
 }
 
 .app2 {
@@ -47,22 +48,22 @@ body {
 
 
 .red {
-   color: red 
+    color: red
 }
 
 //佔位
 %red {
     color: red
- }
+}
 
-@mixin red(){
+@mixin red() {
     color: red;
 }
 
 .text {
-  font-size: 30px;
-  @extend %red;
-// @include red();
+    font-size: 30px;
+    @extend %red;
+    // @include red();
 }
 
 
@@ -70,48 +71,52 @@ body {
 .red {
     background-color: rgb(255, 0, 0);
 }
+
 .green {
     background-color: rgb(42, 125, 0);
 }
+
 .boxline {
     @include rect(300px, 200px);
 }
 
-// 運算
+// 運算  單位要注意
 
 $wd : 10;
 $xs : 5;
+
 .boxer {
-  width: $wd + $xs + px;
-  height: 10 - 5 + px;
-  max-width:  100 * 5 + px;
-  font-size: (100 / 50) + px;
-  font : (100 / 20) + px ;
-} 
+    width: $wd + $xs + px;
+    height: 10 - 5 + px;
+    max-width: 100 * 5 + px;
+    font-size: (100 / 50) + px;
+    font: (100 / 20) + px;
+}
+
+
+//運算函示
+.operator1 {
+    width: floor(100/3) + px; //無條件捨去
+    height: round(100/6) + px; //四捨五入
+    max-width: ceil(100/7) + px; // 無條件進位
+}
 
 
 
+$fontBase : 18px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+h1 {
+   font-size : round($fontBase * 4.2 );
+}
+h2 {
+    font-size : round($fontBase * 3.8);
+}
+ h3 {
+    font-size : round($fontBase * 2.6 );
+ }
+ h4 {
+    font-size : round($fontBase * 1.8 );
+ }
 
 
 

@@ -118,4 +118,26 @@ footer {
   font-size: 2px;
   font: 5px;
 }
+
+.operator1 {
+  width: 33px;
+  height: 17px;
+  max-width: 15px;
+}
+
+h1 {
+  font-size: 76px;
+}
+
+h2 {
+  font-size: 68px;
+}
+
+h3 {
+  font-size: 47px;
+}
+
+h4 {
+  font-size: 32px;
+}
 /*# sourceMappingURL=styles.css.map */

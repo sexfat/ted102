@@ -1,6 +1,9 @@
 //變數要先宣告
 @import 'sass/sassVar';
 
+//函式
+@import 'sass/mixins';
+
 
 //共用
 body {
@@ -45,16 +48,7 @@ body {
        } 
     }
 }
-//js 函式
-// function name(){ }
 
-//mixin sass 函式
-$w : 960px; //全域變數
- 
-@mixin marginAuto($w:null){
-    margin: 0 auto;
-    width: $w; //區域變數
-}
 
 .rect {
   @include marginAuto($w);  
@@ -64,25 +58,18 @@ $w : 960px; //全域變數
     @include marginAuto(100%);
 }
 //預設值
-@mixin box($w:400px , $h: 300px){
-    width: $w;
-    height: $h;
-}
 .box {
     @include box(100px , 200px);
     @include marginAuto();//給null
-}
-
-@mixin rect($w , $h:$w){
-    width: $w;
-    height: $h;
-    background-color: rgb(217, 250, 0);
 }
 
 .app2 {
     @include rect(400px, 300px);
     background-image: url('./image/..');
 }
+
+
+
 
 
 

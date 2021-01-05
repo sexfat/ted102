@@ -1,0 +1,34 @@
+header {
+    // background-color: rgb(218, 218, 218);
+    @include marginAuto(1200px);
+    h1 {
+        font-size: $h1 ;
+        display: inline-block;
+        span {
+           font-size: 10px;
+           color : #333 
+        }
+    }
+    nav {
+        display: inline-block;
+        ul {
+            list-style: none;
+            li {
+                &:nth-child(odd) {
+                   background-color: #ffba53; 
+                }
+                 display: inline-block;
+                 padding: 10px 30px;
+                 background-color: rgb(47, 193, 255);
+                 cursor: pointer;
+                 a {
+                     color: map-get( $bg-color, 'link' );
+                     text-decoration: none;
+                     &:hover {
+                         color: map-get( $bg-color, 'linkhover' );font-weight: bold;
+                     }
+                 }
+            }
+        } 
+     } 
+}

@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* css註解*/
+header {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+header h1 {
+  font-size: 3.6rem;
+  display: inline-block;
+}
+
+header h1 span {
+  font-size: 10px;
+  color: #333;
+}
+
+header nav {
+  display: inline-block;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #2fc1ff;
+  cursor: pointer;
+}
+
+header nav ul li:nth-child(odd) {
+  background-color: #ffba53;
+}
+
+header nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+footer {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #e4e4e4;
+}
+/*# sourceMappingURL=product.css.map */

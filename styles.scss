@@ -9,7 +9,9 @@ $false : false;
 $bg-color :(
    'red'  : #ff1616,
    'blue' : #2d5bf3,
-   'green' : #d7ff67
+   'green' : #d7ff67,
+   'link' : #333,
+   'linkhover' : #000,
  );  // map
 
 
@@ -19,19 +21,40 @@ body {
     font-size:  $fontsize;
     color: map-get( $bg-color, 'red' );
     background-color: map-get( $bg-color, 'green' );
-    .wrapper-index {
-        h1 {
-            font-size: $h1 ;
-            span {
-               font-size: 10px;
-               color : #333 
-            }
-            .title {
-              font-size: 14px;  
-            }
+   
+  
+}
+
+.wrapper{
+    h1 {
+        font-size: $h1 ;
+        span {
+           font-size: 10px;
+           color : #333 
+        }
+        .title {
+          font-size: 14px;  
         }
     }
-  
+    nav {
+       ul {
+           list-style: none;
+           li {
+                display: inline-block;
+                padding: 20px 40px;
+                background-color: rgb(223, 255, 16);
+                cursor: pointer;
+                a {
+                    color: map-get( $bg-color, 'link' );
+                    text-decoration: none;
+                    &:hover {
+                        color: map-get( $bg-color, 'linkhover' );font-weight: bold;
+
+                    }
+                }
+           }
+       } 
+    }
 }
 
 

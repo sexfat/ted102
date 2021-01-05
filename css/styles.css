@@ -7,16 +7,37 @@ body {
   background-color: #d7ff67;
 }
 
-body .wrapper-index h1 {
+.wrapper h1 {
   font-size: 2.8rem;
 }
 
-body .wrapper-index h1 span {
+.wrapper h1 span {
   font-size: 10px;
   color: #333;
 }
 
-body .wrapper-index h1 .title {
+.wrapper h1 .title {
   font-size: 14px;
+}
+
+.wrapper nav ul {
+  list-style: none;
+}
+
+.wrapper nav ul li {
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: #dfff10;
+  cursor: pointer;
+}
+
+.wrapper nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.wrapper nav ul li a:hover {
+  color: #000;
+  font-weight: bold;
 }
 /*# sourceMappingURL=styles.css.map */

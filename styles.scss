@@ -15,6 +15,31 @@ body {
 }
 
 //
+
+header {
+    nav {
+        ul {
+            list-style: none;
+            li {
+                &:nth-child(odd) {
+                   background-color: #ffba53; 
+                }
+                 display: inline-block;
+                 padding: 10px 30px;
+                 background-color: rgb(223, 255, 16);
+                 cursor: pointer;
+                 a {
+                     color: map-get( $bg-color, 'link' );
+                     text-decoration: none;
+                     &:hover {
+                         color: map-get( $bg-color, 'linkhover' );font-weight: bold;
+                     }
+                 }
+            }
+        } 
+     } 
+}
+
 .wrapper{
     h1 {
         font-size: $h1 ;
@@ -26,27 +51,7 @@ body {
           font-size: 14px;  
         }
     }
-    nav {
-       ul {
-           list-style: none;
-           li {
-               &:nth-child(odd) {
-                  background-color: #ffba53; 
-               }
-                display: inline-block;
-                padding: 20px 40px;
-                background-color: rgb(223, 255, 16);
-                cursor: pointer;
-                a {
-                    color: map-get( $bg-color, 'link' );
-                    text-decoration: none;
-                    &:hover {
-                        color: map-get( $bg-color, 'linkhover' );font-weight: bold;
-                    }
-                }
-           }
-       } 
-    }
+
 }
 
 

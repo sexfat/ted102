@@ -7,6 +7,31 @@ body {
   background-color: #d7ff67;
 }
 
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #dfff10;
+  cursor: pointer;
+}
+
+header nav ul li:nth-child(odd) {
+  background-color: #ffba53;
+}
+
+header nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  color: #000;
+  font-weight: bold;
+}
+
 .wrapper h1 {
   font-size: 3.6rem;
 }
@@ -18,31 +43,6 @@ body {
 
 .wrapper h1 .title {
   font-size: 14px;
-}
-
-.wrapper nav ul {
-  list-style: none;
-}
-
-.wrapper nav ul li {
-  display: inline-block;
-  padding: 20px 40px;
-  background-color: #dfff10;
-  cursor: pointer;
-}
-
-.wrapper nav ul li:nth-child(odd) {
-  background-color: #ffba53;
-}
-
-.wrapper nav ul li a {
-  color: #333;
-  text-decoration: none;
-}
-
-.wrapper nav ul li a:hover {
-  color: #000;
-  font-weight: bold;
 }
 
 .rect {

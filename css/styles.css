@@ -44,4 +44,14 @@ body {
   color: #000;
   font-weight: bold;
 }
+
+.rect {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.app {
+  margin: 0 auto;
+  width: 1200px;
+}
 /*# sourceMappingURL=styles.css.map */

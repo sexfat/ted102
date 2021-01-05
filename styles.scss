@@ -2,16 +2,16 @@
 @import 'sass/sassVar';
 
 
+//共用
 body {
     margin: $margin;
     padding: $null;
     font-size:  $fontsize;
     color: map-get( $bg-color, 'red' );
     background-color: map-get( $bg-color, 'green' );
-   
-  
 }
 
+//
 .wrapper{
     h1 {
         font-size: $h1 ;
@@ -45,6 +45,31 @@ body {
        } 
     }
 }
+//js 函式
+// function name(){ }
+
+//mixin sass 函式
+@mixin marginAuto(){
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.rect {
+  @include marginAuto();  
+}
+
+.app {
+    @include marginAuto();
+}
+
+
+
+
+
+
+
+
+
 
 
 

@@ -51,9 +51,7 @@ body {
 //mixin sass 函式
 $w : 960px; //全域變數
  
-
-
-@mixin marginAuto($w){
+@mixin marginAuto($w:null){
     margin: 0 auto;
     width: $w; //區域變數
 }
@@ -65,6 +63,17 @@ $w : 960px; //全域變數
 .app {
     @include marginAuto(100%);
 }
+//預設值
+@mixin box($w:400px , $h: 300px){
+    width: $w;
+    height: $h;
+}
+.box {
+    @include box(100px , 200px);
+    @include marginAuto();//給null
+}
+
+
 
 
 

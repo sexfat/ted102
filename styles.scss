@@ -1,18 +1,5 @@
-//變數
-/* css註解*/
-$fontsize : 16px;
-$h1 : 2.8rem; //數值
-$red : #f20; //顏色
-$margin: 10px 10px 20px 10px; // list
-$null : null; //null
-$false : false;
-$bg-color :(
-   'red'  : #ff1616,
-   'blue' : #2d5bf3,
-   'green' : #d7ff67,
-   'link' : #333,
-   'linkhover' : #000,
- );  // map
+//變數要先宣告
+@import 'sassVar';
 
 
 body {
@@ -52,7 +39,6 @@ body {
                     text-decoration: none;
                     &:hover {
                         color: map-get( $bg-color, 'linkhover' );font-weight: bold;
-
                     }
                 }
            }

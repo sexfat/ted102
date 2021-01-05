@@ -125,19 +125,16 @@ h4 {
 // $num : 1200;
 
 @mixin layout($num) {
-    @if $num==100 {
+    @if $num == 100 {
         width: 100%;
     }
-
     @else {
         width: $num + px;
         @include marginAuto();
     }
-
-    
 }
 
 .wrapper-inner {
-    @include layout(1366);
+    @include layout(1920);
 }
 

@@ -68,7 +68,7 @@ tlnav.to('.top', .3, {
 
 tlnav.stop();
 
-document.getElementById('nav').onmouseover = function (p) {
+document.getElementById('nav').onmouseover = function () {
     tlnav.play(); 
     tl.play();
 }

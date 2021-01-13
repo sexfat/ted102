@@ -12,7 +12,7 @@ tl.to('nav' , .5, {
     ease: Power3.easeOut
 }).staggerTo('nav ul li' , .3 , {
     opacity : 1, 
-    delay : -.7
+    delay : 0
 }, .2).to('.close_bar' , .5 , {
     opacity: 1,
     delay : -.5

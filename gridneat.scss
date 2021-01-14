@@ -47,18 +47,29 @@ $grid-setting: (
 $grid-setting_medium :(
     columns : 4, //總欄位數
     gutter: 10px, // 間隔
-    media : 900px
+    media : 'only screen and (max-width: 900px)'
 );
 
+$grid-setting_small :(
+    columns : 4, //總欄位數
+    gutter: 10px, // 間隔
+    media : 'only screen and (max-width: 600px)'
+);
 
 .wrapper_grid {
     @include grid-container; 
     .grid_3 {
+
         @include grid-column(1 , $grid-setting);
+        //media query
+        //平板
         @include grid-media($grid-setting_medium){
             @include grid-column(2)
         }
-        
+        //手機
+        @include grid-media($grid-setting_small){
+            @include grid-column(4)
+        }
     }
 }
 

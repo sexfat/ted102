@@ -289,12 +289,15 @@ $btn : (
 @mixin push($num , $dir:left) {
     @for $i from 1 through $num {
         .push-#{$dir}_#{$i} {
-            margin-#{$dir} : $i * 1px
+            margin-#{$dir} : $i * 1px;
+            @content;
         }
      }
 }
 
-@include push(100);
+@include push(1000) {
+   position: relative; 
+};
 @include push(100 , top);
 
 

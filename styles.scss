@@ -256,6 +256,7 @@ $btn : (
     'error' : rgb(250, 9, 9),
     'warning' : rgb(255, 255, 0),
     'info' : rgb(255, 174, 0),
+    'black' : rgb(23, 23, 23)
 );
 
 .btn {
@@ -267,15 +268,19 @@ $btn : (
     border-radius: 5px;
 }
 
-@each $key,$val in $btn {
+
+@mixin btn-color($btn){
+  @each $key,$val in $btn {
     .btn-#{$key} {
         background-color: $val;
         cursor: pointer;
         border: 1px solid darken($val, 5%); //顏色函式 變暗
         transition: all .3 ease;
         &:hover {
-            background-color: darken($val, 15%);
+            background-color: darken($val, 25%);
         }
-      @extend .btn
+      @extend .btn;
     }
+ }
 }
+@include btn-color($btn);

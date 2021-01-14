@@ -396,7 +396,7 @@ h3 {
   width: 100vw;
 }
 
-.btn, .btn-primary, .btn-success, .btn-error, .btn-warning, .btn-info {
+.btn, .btn-primary, .btn-success, .btn-error, .btn-warning, .btn-info, .btn-black {
   display: inline-block;
   font-size: 14px;
   vertical-align: middle;
@@ -413,7 +413,7 @@ h3 {
 }
 
 .btn-primary:hover {
-  background-color: #005fb3;
+  background-color: #004480;
 }
 
 .btn-success {
@@ -424,7 +424,7 @@ h3 {
 }
 
 .btn-success:hover {
-  background-color: #19a351;
+  background-color: #13773b;
 }
 
 .btn-error {
@@ -435,7 +435,7 @@ h3 {
 }
 
 .btn-error:hover {
-  background-color: #b30404;
+  background-color: #810303;
 }
 
 .btn-warning {
@@ -446,7 +446,7 @@ h3 {
 }
 
 .btn-warning:hover {
-  background-color: #b3b300;
+  background-color: olive;
 }
 
 .btn-info {
@@ -457,6 +457,17 @@ h3 {
 }
 
 .btn-info:hover {
-  background-color: #b37a00;
+  background-color: #805700;
+}
+
+.btn-black {
+  background-color: #171717;
+  cursor: pointer;
+  border: 1px solid #0a0a0a;
+  transition: all .3 ease;
+}
+
+.btn-black:hover {
+  background-color: black;
 }
 /*# sourceMappingURL=styles.css.map */

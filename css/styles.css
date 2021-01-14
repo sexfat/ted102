@@ -406,36 +406,40 @@ h3 {
 .btn-primary {
   background-color: #0088ff;
   border: 1px solid #005299;
+  transition: all .3 ease;
 }
 
 .btn-primary:hover {
-  background-color: #003666;
+  background-color: #005fb3;
 }
 
 .btn-success {
   background-color: #2bde73;
   border: 1px solid #168d46;
+  transition: all .3 ease;
 }
 
 .btn-success:hover {
-  background-color: #0f6130;
+  background-color: #19a351;
 }
 
 .btn-error {
   background-color: #fa0909;
   border: 1px solid #9a0303;
+  transition: all .3 ease;
 }
 
 .btn-error:hover {
-  background-color: #680202;
+  background-color: #b30404;
 }
 
 .btn-warning {
   background-color: yellow;
   border: 1px solid #999900;
+  transition: all .3 ease;
 }
 
 .btn-warning:hover {
-  background-color: #666600;
+  background-color: #b3b300;
 }
 /*# sourceMappingURL=styles.css.map */

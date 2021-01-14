@@ -47,19 +47,20 @@ $grid-setting: (
 $grid-setting_medium :(
     columns : 4, //總欄位數
     gutter: 10px, // 間隔
-    media : 'only screen and (max-width: 900px)'
+    direction: ltr,
+    media : 'only screen and (min-width:601px) and (max-width: 1200px)'
 );
 
 $grid-setting_small :(
     columns : 4, //總欄位數
     gutter: 10px, // 間隔
+    direction: ltr,
     media : 'only screen and (max-width: 600px)'
 );
 
 .wrapper_grid {
     @include grid-container; 
     .grid_3 {
-
         @include grid-column(1 , $grid-setting);
         //media query
         //平板

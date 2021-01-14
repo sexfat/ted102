@@ -285,11 +285,17 @@ $btn : (
 }
 @include btn-color($btn);
 
-@for $i from 1 through 100 {
-   .push-left_#{$i} {
-       margin-left : $i * 1px
-   }
+
+@mixin push($num , $dir:left) {
+    @for $i from 1 through $num {
+        .push-#{$dir}_#{$i} {
+            margin-#{$dir} : $i * 1px
+        }
+     }
 }
+
+@include push(100);
+
 
 
 

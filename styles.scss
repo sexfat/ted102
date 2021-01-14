@@ -300,33 +300,46 @@ $btn : (
 };
 @include push(10 , top);
 
-
+//斷點變數
+$desktop : 1366px;
+$tablet : 996px;
+$mobile : 995px;
 
 
 //rwd 組件
 @mixin rwd($breakpoint){
     //桌機
 @if $breakpoint == 'desktop' {
-    @media all and(min-width: 1200px){
+    @media all and(min-width: $desktop){
         @content;
     }
 }
 //平板
 @else if $breakpoint == 'tablet' {
-    @media all and(min-width: 721px){
+    @media all and(min-width: $tablet){
         @content;
     }
 }
 // 手機
 @else if $breakpoint == 'mobile' {
-    @media all and(max-width: 720px){
+    @media all and(max-width: $mobile){
         @content;
     }
  }
 }
+// 可自已設定
+@mixin rwd-self($val , $w:min) {
+    @media all and(#{$w}-width: $val){
+        @content;
+    } 
+}
 
-
-
+@include rwd-self(996px,max) {
+  .box {  
+   width: 80%;
+  }
+}
+//rwd 
 
 @include rwd(desktop){
     body {

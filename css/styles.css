@@ -561,19 +561,25 @@ h3 {
   margin-top: 10px;
 }
 
-@media all and (min-width: 1200px) {
+@media all and (max-width: 996px) {
+  .box {
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 1366px) {
   body {
     font-size: 100px;
   }
 }
 
-@media all and (min-width: 721px) {
+@media all and (min-width: 996px) {
   body {
     font-size: 80px;
   }
 }
 
-@media all and (max-width: 720px) {
+@media all and (max-width: 995px) {
   body {
     font-size: 60px;
   }

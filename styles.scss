@@ -250,14 +250,12 @@ $val in $map {
 
 //按鈕組件
 
-$btn : (
-    'primary' : rgb(0, 136, 255),
+$btn : ('primary' : rgb(0, 136, 255),
     'success' : rgb(43, 222, 115),
     'error' : rgb(250, 9, 9),
     'warning' : rgb(255, 255, 0),
     'info' : rgb(255, 174, 0),
-    'black' : rgb(23, 23, 23)
-);
+    'black' : rgb(23, 23, 23));
 
 .btn {
     display: inline-block;
@@ -269,106 +267,142 @@ $btn : (
 }
 
 
-@mixin btn-color($btn){
-  @each $key,$val in $btn {
-    .btn-#{$key} {
-        background-color: $val;
-        cursor: pointer;
-        border: 1px solid darken($val, 5%); //顏色函式 變暗
-        transition: all .3 ease;
-        &:hover {
-            background-color: darken($val, 25%);
+@mixin btn-color($btn) {
+
+    @each $key,
+    $val in $btn {
+        .btn-#{$key} {
+            background-color: $val;
+            cursor: pointer;
+            border: 1px solid darken($val, 5%); //顏色函式 變暗
+            transition: all .3 ease;
+
+            &:hover {
+                background-color: darken($val, 25%);
+            }
+
+            @extend .btn;
         }
-      @extend .btn;
     }
- }
 }
+
 @include btn-color($btn);
 
 
-@mixin push($num , $dir:left) {
+@mixin push($num, $dir:left) {
     @for $i from 1 through $num {
         .push-#{$dir}_#{$i} {
-            margin-#{$dir} : $i * 1px;
+            margin-#{$dir}: $i * 1px;
             @content;
         }
-     }
+    }
 }
 
 @include push(10) {
-   position: relative; 
-};
-@include push(10 , top);
+    position: relative;
+}
+
+;
+@include push(10, top);
 
 //斷點變數
-$desktop : 1366px;
-$tablet : 996px;
-$mobile : 995px;
+$desktop : 1200px;
+$tablet : 800px;
+$mobile : 799px;
 
 
 //rwd 組件
-@mixin rwd($breakpoint){
+@mixin rwd($breakpoint) {
+
     //桌機
-@if $breakpoint == 'desktop' {
-    @media all and(min-width: $desktop){
-        @content;
+    @if $breakpoint=='desktop' {
+        @media all and(min-width: $desktop) {
+            @content;
+        }
     }
-}
-//平板
-@else if $breakpoint == 'tablet' {
-    @media all and(min-width: $tablet){
-        @content;
+
+    //平板
+    @else if $breakpoint=='tablet' {
+        @media all and(min-width: $tablet) {
+            @content;
+        }
     }
-}
-// 手機
-@else if $breakpoint == 'mobile' {
-    @media all and(max-width: $mobile){
-        @content;
+
+    // 手機
+    @else if $breakpoint=='mobile' {
+        @media all and(max-width: $mobile) {
+            @content;
+        }
     }
- }
-}
-// 可自已設定
-@mixin rwd-self($val , $w:min) {
-    @media all and(#{$w}-width: $val){
-        @content;
-    } 
 }
 
-@include rwd-self(996px,max) {
-  .box {  
-   width: 80%;
-  }
+// 可自已設定
+@mixin rwd-self($val, $w:min) {
+    @media all and(#{$w}-width: $val) {
+        @content;
+    }
 }
+
+@include rwd-self(996px, max) {
+    .box {
+        width: 80%;
+    }
+}
+
 //rwd 
 
-@include rwd(desktop){
+@include rwd(desktop) {
     body {
         font-size: 100px;
     }
 }
 
-@include rwd(tablet){
+@include rwd(tablet) {
     body {
         font-size: 80px;
     }
 }
 
-@include rwd(mobile){
+@include rwd(mobile) {
     body {
         font-size: 60px;
     }
 }
 
+$rwd : (
+'desktop' : 1200px,
+'tablet'  : 721px,
+'mobile' : 320px
+);
 
 
 
 
+@mixin rwd-each($breakpoint) {
+    @each $b,$val in $rwd {
+        @if $breakpoint== $b {
+            @media all and(min-width: $val) {
+                @content;
+            }
+        }
+    }
+}
 
+@include rwd-each(desktop){
+   .wrapper {
+      width: 100%;
+   }
+}
 
+@include rwd-each(tablet){
+    .wrapper {
+       width: 95%;
+    }
+ }
 
-
-
-
-
-
+ @include rwd-each(mobile){
+    .wrapper {
+       width: 60%;
+    }
+ }
 

@@ -567,21 +567,39 @@ h3 {
   }
 }
 
-@media all and (min-width: 1366px) {
+@media all and (min-width: 1200px) {
   body {
     font-size: 100px;
   }
 }
 
-@media all and (min-width: 996px) {
+@media all and (min-width: 800px) {
   body {
     font-size: 80px;
   }
 }
 
-@media all and (max-width: 995px) {
+@media all and (max-width: 799px) {
   body {
     font-size: 60px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 721px) {
+  .wrapper {
+    width: 95%;
+  }
+}
+
+@media all and (min-width: 320px) {
+  .wrapper {
+    width: 60%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

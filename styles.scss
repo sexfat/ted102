@@ -285,5 +285,13 @@ $btn : (
 }
 @include btn-color($btn);
 
+@for $i from 1 through 100 {
+   .push-left_#{$i} {
+       margin-left : $i * 1px
+   }
+}
+
+
+
 
 

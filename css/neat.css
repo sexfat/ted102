@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 
 section {
@@ -39,9 +40,15 @@ section {
 }
 
 .wrapper_4 .grid_3 {
-  width: calc(25% - 75px);
+  width: calc(25% - 12.5px);
   float: left;
-  margin-left: 60px;
+  margin-left: 10px;
+}
+
+.wrapper_grid::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
 .wrapper_grid .grid_4 {
@@ -60,6 +67,40 @@ section {
 
 @media all and (max-width: 767px) {
   .wrapper_grid .grid_4 {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
+  }
+}
+
+.wrapper_gallery::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.wrapper_gallery .sidebar {
+  width: calc(33.33333% - 26.66667px);
+  float: left;
+  margin-left: 20px;
+}
+
+@media all and (min-width: 768px) and (max-width: 1200px) {
+  .wrapper_gallery .sidebar {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
+  }
+}
+
+.wrapper_gallery .main {
+  width: calc(66.66667% - 33.33333px);
+  float: left;
+  margin-left: 20px;
+}
+
+@media all and (min-width: 768px) and (max-width: 1200px) {
+  .wrapper_gallery .main {
     width: calc(100% - 40px);
     float: left;
     margin-left: 20px;

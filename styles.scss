@@ -295,10 +295,63 @@ $btn : (
      }
 }
 
-@include push(1000) {
+@include push(10) {
    position: relative; 
 };
-@include push(100 , top);
+@include push(10 , top);
+
+
+
+
+@mixin rwd($breakpoint){
+    //桌機
+@if $breakpoint == 'desktop' {
+    @media all and(min-width: 1200px){
+        @content;
+    }
+}
+//平板
+@else if $breakpoint == 'tablet' {
+    @media all and(min-width: 721px){
+        @content;
+    }
+}
+// 手機
+@else if $breakpoint == 'mobile' {
+    @media all and(max-width: 720px){
+        @content;
+    }
+ }
+}
+
+
+
+
+@include rwd(desktop){
+    body {
+        font-size: 100px;
+    }
+}
+
+@include rwd(tablet){
+    body {
+        font-size: 80px;
+    }
+}
+
+@include rwd(mobile){
+    body {
+        font-size: 60px;
+    }
+}
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,15 @@
+//變數要先宣告
+@import 'sass/sassVar';
+
+//函式
+@import 'sass/mixins';
+
+
+
+@include rwd(desktop) {
+    body {
+       .wrapper { 
+         width: 100vw;
+       }
+    }
+}

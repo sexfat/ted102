@@ -17,3 +17,44 @@ $bg-color :(
  $w : 1200px; //全域變數
  $zero : 0px;
 
+
+ $map :(h1 : 40px,
+    h2 : 30px,
+    h3 : 20px,
+    '.small' : 12px,
+    '.large' : 30px,
+    '.middle' : 24px);
+
+$color : ('red' : #f20,
+    'green' : green,
+    'pink' : #fa7ce7);
+
+
+
+$num :('a1' : 10px 20px 20px 10px,
+    'a2' : 0 auto,
+);
+
+//按鈕組件
+
+$btn : ('primary' : rgb(0, 136, 255),
+    'success' : rgb(43, 222, 115),
+    'error' : rgb(250, 9, 9),
+    'warning' : rgb(255, 255, 0),
+    'info' : rgb(255, 174, 0),
+    'black' : rgb(23, 23, 23));
+
+
+//斷點變數
+$desktop : 1200px;
+$tablet : 800px;
+$mobile : 799px;  
+
+//each
+$rwd : (
+'desktop' : 1200px,
+'tablet'  : 721px,
+'mobile' : 320px
+);
+
+

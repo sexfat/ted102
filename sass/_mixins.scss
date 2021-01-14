@@ -31,3 +31,103 @@
         }
     }
 }
+
+
+// 圖片路徑
+@mixin imgUrl($img , $style:jpg) {
+    @each $a in $img {
+        .img_#{$a} {
+            background-image:url('./images/#{$a}.#{$style}');
+            @content; //content 
+        }
+    }
+}
+
+//顏色
+
+@mixin colorbox($color) {
+
+    @each $key,
+    $val in $color {
+        .#{$key} {
+            background-color: $val;
+            @include rect(100vw, null);
+        }
+    }
+}
+
+
+//按鈕組件
+@mixin btn-color($btn) {
+    @each $key,
+    $val in $btn {
+        .btn-#{$key} {
+            background-color: $val;
+            cursor: pointer;
+            border: 1px solid darken($val, 5%); //顏色函式 變暗
+            transition: all .3 ease;
+
+            &:hover {
+                background-color: darken($val, 25%);
+            }
+
+            @extend .btn;
+        }
+    }
+}
+
+
+// push
+
+@mixin push($num, $dir:left) {
+    @for $i from 1 through $num {
+        .push-#{$dir}_#{$i} {
+            margin-#{$dir}: $i * 1px;
+            @content;
+        }
+    }
+}
+
+//rwd 組件
+@mixin rwd($breakpoint) {
+
+    //桌機
+    @if $breakpoint=='desktop' {
+        @media all and(min-width: $desktop) {
+            @content;
+        }
+    }
+
+    //平板
+    @else if $breakpoint=='tablet' {
+        @media all and(min-width: $tablet) {
+            @content;
+        }
+    }
+
+    // 手機
+    @else if $breakpoint=='mobile' {
+        @media all and(max-width: $mobile) {
+            @content;
+        }
+    }
+}
+
+// 可自已設定
+@mixin rwd-self($val, $w:min) {
+    @media all and(#{$w}-width: $val) {
+        @content;
+    }
+}
+
+
+//rwd 組件
+@mixin rwd-each($breakpoint) {
+    @each $b,$val in $rwd {
+        @if $breakpoint == $b {
+            @media all and (min-width: $val) {
+                @content;
+            }
+        }
+    }
+}

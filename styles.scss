@@ -156,6 +156,8 @@ h4 {
 
 @include grid(xs, 12);
 
+
+
 $list : a1 a2 a3 b1 b2 box01; //list 
 
 @each $a in $list {
@@ -165,15 +167,7 @@ $list : a1 a2 a3 b1 b2 box01; //list
     }
 }
 
-//
-@mixin imgUrl($img , $style:jpg) {
-    @each $a in $img {
-        .img_#{$a} {
-            background-image:url('./images/#{$a}.#{$style}');
-            @content; //content 
-        }
-    }
-}
+
 
 .slider01 {
     width: 100%;
@@ -203,22 +197,7 @@ $list : a1 a2 a3 b1 b2 box01; //list
 
 
 
-$map :(h1 : 40px,
-    h2 : 30px,
-    h3 : 20px,
-    '.small' : 12px,
-    '.large' : 30px,
-    '.middle' : 24px);
 
-$color : ('red' : #f20,
-    'green' : green,
-    'pink' : #fa7ce7);
-
-
-
-$num :('a1' : 10px 20px 20px 10px,
-    'a2' : 0 auto,
-);
 
 
 @each $key,
@@ -235,27 +214,11 @@ $val in $map {
     }
 }
 
-@mixin colorbox($color) {
 
-    @each $key,
-    $val in $color {
-        .#{$key} {
-            background-color: $val;
-            @include rect(100vw, null);
-        }
-    }
-}
 
 @include colorbox($color);
 
-//按鈕組件
 
-$btn : ('primary' : rgb(0, 136, 255),
-    'success' : rgb(43, 222, 115),
-    'error' : rgb(250, 9, 9),
-    'warning' : rgb(255, 255, 0),
-    'info' : rgb(255, 174, 0),
-    'black' : rgb(23, 23, 23));
 
 .btn {
     display: inline-block;
@@ -267,36 +230,12 @@ $btn : ('primary' : rgb(0, 136, 255),
 }
 
 
-@mixin btn-color($btn) {
 
-    @each $key,
-    $val in $btn {
-        .btn-#{$key} {
-            background-color: $val;
-            cursor: pointer;
-            border: 1px solid darken($val, 5%); //顏色函式 變暗
-            transition: all .3 ease;
-
-            &:hover {
-                background-color: darken($val, 25%);
-            }
-
-            @extend .btn;
-        }
-    }
-}
 
 @include btn-color($btn);
 
 
-@mixin push($num, $dir:left) {
-    @for $i from 1 through $num {
-        .push-#{$dir}_#{$i} {
-            margin-#{$dir}: $i * 1px;
-            @content;
-        }
-    }
-}
+
 
 @include push(10) {
     position: relative;
@@ -305,43 +244,6 @@ $btn : ('primary' : rgb(0, 136, 255),
 ;
 @include push(10, top);
 
-//斷點變數
-$desktop : 1200px;
-$tablet : 800px;
-$mobile : 799px;
-
-
-//rwd 組件
-@mixin rwd($breakpoint) {
-
-    //桌機
-    @if $breakpoint=='desktop' {
-        @media all and(min-width: $desktop) {
-            @content;
-        }
-    }
-
-    //平板
-    @else if $breakpoint=='tablet' {
-        @media all and(min-width: $tablet) {
-            @content;
-        }
-    }
-
-    // 手機
-    @else if $breakpoint=='mobile' {
-        @media all and(max-width: $mobile) {
-            @content;
-        }
-    }
-}
-
-// 可自已設定
-@mixin rwd-self($val, $w:min) {
-    @media all and(#{$w}-width: $val) {
-        @content;
-    }
-}
 
 @include rwd-self(996px, max) {
     .box {
@@ -369,40 +271,33 @@ $mobile : 799px;
     }
 }
 
-$rwd : (
-'desktop' : 1200px,
-'tablet'  : 721px,
-'mobile' : 320px
-);
 
-
-
-
-@mixin rwd-each($breakpoint) {
-    @each $b,$val in $rwd {
-        @if $breakpoint== $b {
-            @media all and(min-width: $val) {
-                @content;
-            }
-        }
+@include rwd-each(desktop) {
+    .wrapper {
+        width: 100%;
     }
 }
 
-@include rwd-each(desktop){
-   .wrapper {
-      width: 100%;
-   }
+@include rwd-each(tablet) {
+    .wrapper {
+        width: 95%;
+    }
 }
 
-@include rwd-each(tablet){
+@include rwd-each(mobile) {
     .wrapper {
-       width: 95%;
+        width: 60%;
     }
- }
+}
 
- @include rwd-each(mobile){
-    .wrapper {
-       width: 60%;
-    }
- }
 
+@mixin prefix($prop, $val) {
+    #{$prop}: $val;
+    -webkit-#{$prop}: $val;
+    -moz-#{$prop}: $val;
+    -o-#{$prop}: $val;
+}
+
+.box {
+    @include prefix(transform, scale3d(1.2, 3, 1.3))
+}

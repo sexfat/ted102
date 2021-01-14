@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/* css註解*/
+@media all and (min-width: 1200px) {
+  body .wrapper {
+    width: 100vw;
+  }
+}
+/*# sourceMappingURL=about.css.map */

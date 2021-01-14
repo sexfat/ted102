@@ -53,7 +53,15 @@ section {
 
 .wrapper_grid .grid_3 {
   width: calc(25% - 12.5px);
-  float: right;
-  margin-right: 10px;
+  float: left;
+  margin-left: 10px;
+}
+
+@media only screen and (min-width: 900px) {
+  .wrapper_grid .grid_3 {
+    width: calc(50% - 15px);
+    float: left;
+    margin-left: 10px;
+  }
 }
 /*# sourceMappingURL=gridneat.css.map */

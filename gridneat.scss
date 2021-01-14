@@ -39,15 +39,26 @@ section {
 
 //第二個場景
 $grid-setting: (
-  columns : 4,
-  gutter: 10px,
-  direction: rtl,
+  columns : 4, //總欄位數
+  gutter: 10px, // 間隔
+  direction: ltr, //方向
 );
+
+$grid-setting_medium :(
+    columns : 4, //總欄位數
+    gutter: 10px, // 間隔
+    media : 900px
+);
+
 
 .wrapper_grid {
     @include grid-container; 
     .grid_3 {
         @include grid-column(1 , $grid-setting);
+        @include grid-media($grid-setting_medium){
+            @include grid-column(2)
+        }
+        
     }
 }
 

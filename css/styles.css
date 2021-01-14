@@ -349,6 +349,14 @@ h4 {
   height: 50px;
 }
 
+.a1 {
+  margin: 10px 20px 20px 10px;
+}
+
+.a2 {
+  margin: 0 auto;
+}
+
 h1 {
   font-size: 40px;
 }
@@ -386,5 +394,48 @@ h3 {
 .pink {
   background-color: #fa7ce7;
   width: 100vw;
+}
+
+.btn, .btn-primary, .btn-success, .btn-error, .btn-warning {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+  padding: .375rem .75rem;
+}
+
+.btn-primary {
+  background-color: #0088ff;
+  border: 1px solid #005299;
+}
+
+.btn-primary:hover {
+  background-color: #003666;
+}
+
+.btn-success {
+  background-color: #2bde73;
+  border: 1px solid #168d46;
+}
+
+.btn-success:hover {
+  background-color: #0f6130;
+}
+
+.btn-error {
+  background-color: #fa0909;
+  border: 1px solid #9a0303;
+}
+
+.btn-error:hover {
+  background-color: #680202;
+}
+
+.btn-warning {
+  background-color: yellow;
+  border: 1px solid #999900;
+}
+
+.btn-warning:hover {
+  background-color: #666600;
 }
 /*# sourceMappingURL=styles.css.map */

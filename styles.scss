@@ -215,6 +215,19 @@ $color : ('red' : #f20,
     'pink' : #fa7ce7);
 
 
+
+$num :('a1' : 10px 20px 20px 10px,
+    'a2' : 0 auto,
+);
+
+
+@each $key,
+$val in $num {
+    .#{$key} {
+        margin: $val;
+    }
+}
+
 @each $key,
 $val in $map {
     #{$key} {
@@ -223,7 +236,9 @@ $val in $map {
 }
 
 @mixin colorbox($color) {
-    @each $key, $val in $color {
+
+    @each $key,
+    $val in $color {
         .#{$key} {
             background-color: $val;
             @include rect(100vw, null);
@@ -233,5 +248,27 @@ $val in $map {
 
 @include colorbox($color);
 
+$btn : ('primary' : rgb(0, 136, 255),
+    'success' : rgb(43, 222, 115),
+    'error' : rgb(250, 9, 9),
+    'warning' : rgb(255, 255, 0),
+);
 
+.btn {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+    padding: .375rem .75rem;
+}
 
+@each $key,$val in $btn {
+    .btn-#{$key} {
+        background-color: $val;
+        border: 1px solid darken($val, 20%);
+
+        &:hover {
+            background-color: darken($val, 30%);
+        }
+      @extend .btn
+    }
+}

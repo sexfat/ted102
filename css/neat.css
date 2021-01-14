@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+.red {
+  background-color: #f2e;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.h20 {
+  height: 100vh;
+}
+
+.wrapper_12::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.wrapper_12 .grid_1 {
+  width: calc(8.33333% - 21.66667px);
+  float: left;
+  margin-left: 20px;
+}
+
+.wrapper_4::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.wrapper_4 .grid_3 {
+  width: calc(25% - 75px);
+  float: left;
+  margin-left: 60px;
+}
+
+.wrapper_grid .grid_4 {
+  width: calc(25% - 25px);
+  float: left;
+  margin-left: 20px;
+}
+
+@media all and (min-width: 768px) and (max-width: 1200px) {
+  .wrapper_grid .grid_4 {
+    width: calc(50% - 30px);
+    float: left;
+    margin-left: 20px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .wrapper_grid .grid_4 {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
+  }
+}
+/*# sourceMappingURL=neat.css.map */

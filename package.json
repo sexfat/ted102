@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap-sass": "^3.4.1"
+    "bootstrap-sass": "^3.4.1",
+    "bourbon-neat": "^4.0.0",
+    "neat": "^2.1.0"
   }
 }

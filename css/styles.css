@@ -245,4 +245,34 @@ h4 {
   width: 100%;
   display: inline-block;
 }
+
+.img_a1 {
+  background-image: url(./images/a1.jpg);
+  width: 100%;
+}
+
+.img_a2 {
+  background-image: url(./images/a2.jpg);
+  width: 100%;
+}
+
+.img_a3 {
+  background-image: url(./images/a3.jpg);
+  width: 100%;
+}
+
+.img_b1 {
+  background-image: url(./images/b1.jpg);
+  width: 100%;
+}
+
+.img_b2 {
+  background-image: url(./images/b2.jpg);
+  width: 100%;
+}
+
+.img_box01 {
+  background-image: url(./images/box01.jpg);
+  width: 100%;
+}
 /*# sourceMappingURL=styles.css.map */

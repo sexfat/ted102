@@ -153,9 +153,23 @@ h4 {
         width: $i * 1px;
     }
 }
-
-
-
 @include grid(xs,12);
+
+$list : a1 a2 a3 b1 b2 box01;  //list 
+
+@each $a in $list {
+    .img_#{$a} {
+       background-image:url(./images/#{$a}.jpg); 
+       width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
 
 

@@ -275,4 +275,32 @@ h4 {
   background-image: url(./images/box01.jpg);
   width: 100%;
 }
+
+.silder01 .img_arrow {
+  background-image: url(./images/arrow.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.silder01 .img_circle {
+  background-image: url(./images/circle.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.silder01 .img_aa {
+  background-image: url(./images/aa.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.silder02 .img_rect {
+  background-image: url(./images/rect.jpg);
+  background-size: cover;
+}
+
+.silder02 .img_cc {
+  background-image: url(./images/cc.jpg);
+  background-size: cover;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -164,6 +164,34 @@ $list : a1 a2 a3 b1 b2 box01;  //list
     }
 }
 
+@mixin imgUrl($img){
+    @each $a in $img {
+        .img_#{$a} {
+           background-image:url(./images/#{$a}.jpg);
+           @content;
+        }
+    }
+} 
+
+.silder01 {
+   @include imgUrl(arrow circle aa){
+        background-repeat: no-repeat; 
+        background-size: contain;
+   }
+}
+
+.silder02 {
+    @include imgUrl(rect cc){
+      background-size: cover;
+    }
+ }
+
+
+
+
+
+
+
 
 
 

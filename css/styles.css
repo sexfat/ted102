@@ -396,16 +396,19 @@ h3 {
   width: 100vw;
 }
 
-.btn, .btn-primary, .btn-success, .btn-error, .btn-warning {
+.btn, .btn-primary, .btn-success, .btn-error, .btn-warning, .btn-info {
   display: inline-block;
   font-size: 14px;
   vertical-align: middle;
-  padding: .375rem .75rem;
+  padding: .325rem 1rem;
+  color: #fff;
+  border-radius: 5px;
 }
 
 .btn-primary {
   background-color: #0088ff;
-  border: 1px solid #005299;
+  cursor: pointer;
+  border: 1px solid #007ae6;
   transition: all .3 ease;
 }
 
@@ -415,7 +418,8 @@ h3 {
 
 .btn-success {
   background-color: #2bde73;
-  border: 1px solid #168d46;
+  cursor: pointer;
+  border: 1px solid #20cf67;
   transition: all .3 ease;
 }
 
@@ -425,7 +429,8 @@ h3 {
 
 .btn-error {
   background-color: #fa0909;
-  border: 1px solid #9a0303;
+  cursor: pointer;
+  border: 1px solid #e50505;
   transition: all .3 ease;
 }
 
@@ -435,11 +440,23 @@ h3 {
 
 .btn-warning {
   background-color: yellow;
-  border: 1px solid #999900;
+  cursor: pointer;
+  border: 1px solid #e6e600;
   transition: all .3 ease;
 }
 
 .btn-warning:hover {
   background-color: #b3b300;
+}
+
+.btn-info {
+  background-color: #ffae00;
+  cursor: pointer;
+  border: 1px solid #e69d00;
+  transition: all .3 ease;
+}
+
+.btn-info:hover {
+  background-color: #b37a00;
 }
 /*# sourceMappingURL=styles.css.map */

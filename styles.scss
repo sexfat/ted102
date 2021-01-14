@@ -248,23 +248,30 @@ $val in $map {
 
 @include colorbox($color);
 
-$btn : ('primary' : rgb(0, 136, 255),
+//按鈕組件
+
+$btn : (
+    'primary' : rgb(0, 136, 255),
     'success' : rgb(43, 222, 115),
     'error' : rgb(250, 9, 9),
     'warning' : rgb(255, 255, 0),
+    'info' : rgb(255, 174, 0),
 );
 
 .btn {
     display: inline-block;
     font-size: 14px;
     vertical-align: middle;
-    padding: .375rem .75rem;
+    padding: .325rem 1rem;
+    color: #fff;
+    border-radius: 5px;
 }
 
 @each $key,$val in $btn {
     .btn-#{$key} {
         background-color: $val;
-        border: 1px solid darken($val, 20%); //顏色函式 變暗
+        cursor: pointer;
+        border: 1px solid darken($val, 5%); //顏色函式 變暗
         transition: all .3 ease;
         &:hover {
             background-color: darken($val, 15%);

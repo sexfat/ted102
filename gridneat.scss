@@ -1,0 +1,58 @@
+//套件引入
+@import 'node_modules/bourbon-neat/core/neat' ;
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff;}
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.red {
+    background-color: rgb(148, 0, 45);
+}
+.blue {
+    background-color: blue;
+}
+.h100 {
+    height: 100vh;
+}
+
+
+
+//第一個場景
+.wrapper_12 {
+    @include grid-container; 
+    .sidebar {
+      @include grid-column(2); 
+    }
+    .content {
+      @include grid-column(6); 
+      }
+    .menu {
+        @include grid-column(4);
+    }  
+}
+
+//第二個場景
+$grid-setting: (
+  columns : 4,
+  gutter: 10px,
+  direction: rtl,
+);
+
+.wrapper_grid {
+    @include grid-container; 
+    .grid_3 {
+        @include grid-column(1 , $grid-setting);
+    }
+}
+
+
+
+
+
+

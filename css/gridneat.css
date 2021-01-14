@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+.red {
+  background-color: #94002d;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.h100 {
+  height: 100vh;
+}
+
+.wrapper_12::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.wrapper_12 .sidebar {
+  width: calc(16.66667% - 23.33333px);
+  float: left;
+  margin-left: 20px;
+}
+
+.wrapper_12 .content {
+  width: calc(50% - 30px);
+  float: left;
+  margin-left: 20px;
+}
+
+.wrapper_12 .menu {
+  width: calc(33.33333% - 26.66667px);
+  float: left;
+  margin-left: 20px;
+}
+
+.wrapper_grid::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.wrapper_grid .grid_3 {
+  width: calc(25% - 12.5px);
+  float: right;
+  margin-right: 10px;
+}
+/*# sourceMappingURL=gridneat.css.map */

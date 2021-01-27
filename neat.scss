@@ -1,0 +1,99 @@
+@import 'node_modules/bourbon-neat/core/neat';
+
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff;}
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.red {
+    background-color: #f2e;
+}
+
+
+.blue {
+    background-color: blue;
+}
+.h20 {
+    height: 100vh;
+}
+
+.wrapper_12 {
+    @include grid-container;
+    .grid_1 {
+        @include grid-column(1);
+    }
+   
+}
+
+$grid_3 :(
+    columns: 4,
+    gutter: 10px,
+    // direction: rtl,
+    direction: ltr,
+);
+
+.wrapper_4 {
+    @include grid-container;
+    .grid_3{
+        @include grid-column(1 , $grid_3);
+    }
+}
+
+
+$custom-grid: ( columns: 12, gutter: 20px, media: 1200px, direction: ltr, );
+$medium-custom-grid: ( columns: 12, gutter: 20px, media:'all and (min-width: 768px) and (max-width: 1200px)', direction: ltr, );
+$small-custom-grid: ( columns: 12, gutter: 20px, media: 'all  and (max-width: 767px)', direction: ltr, );
+
+
+.wrapper_grid {
+    @include grid-container;
+    
+    .grid_4 {
+       @include grid-column(3 , $custom-grid);
+       @include grid-media($medium-custom-grid){
+        @include grid-column(6);
+       }
+       @include grid-media($small-custom-grid){
+        @include grid-column(12);
+       }
+    } 
+
+}
+
+
+$gallery :(
+    columns : 3,
+    gutter : 10px,
+);
+
+
+.wrapper_gallery {
+    @include grid-container;
+    .sidebar {
+        @include grid-column(4 , $custom-grid);
+        @include grid-media($medium-custom-grid){
+            @include grid-column(12);
+           }
+    }
+    .main{
+        @include grid-column(8 , $custom-grid);
+        @include grid-media($medium-custom-grid){
+            @include grid-column(12);
+           } 
+    }
+}
+
+
+
+
+
+
+
+
+

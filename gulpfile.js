@@ -1,6 +1,6 @@
 const fileinclude = require('gulp-file-include');
-
-function includeHTML(done) {
+ 
+exports.html =  function includeHTML(done) {
     return src('*.html')
         .pipe(fileinclude({
             prefix: '@@',

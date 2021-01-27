@@ -1,3 +1,12 @@
+const {
+    src,
+    series,
+    dest,
+    parallel,
+    watch
+} = require('gulp');
+
+
 const fileinclude = require('gulp-file-include');
  
 exports.html =  function includeHTML(done) {

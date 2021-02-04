@@ -75,11 +75,15 @@ function sassStyle(){
     return src('sass/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
-        outputStyle: "expanded"   // nested巢狀  // compressed壓縮  //expanded 原本
+        outputStyle: "compressed"   // nested巢狀  // compressed壓縮  //expanded 原本
     }).on('error', sass.logError))
     .pipe(sourcemaps.write())
+    .pipe(concat('all.css')) // 合併
+    .pipe(cleanCSS()) //壓縮
     .pipe(dest('css/'))
 }
+
+
 
 //監聽 scss
 exports.w = function watchfile(){

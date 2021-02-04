@@ -6,8 +6,10 @@ const {
     watch
 } = require('gulp');
 
+
+
 //輸出任務一
-function func01(cb){
+function func01(cb) {
     console.log('任務一');
     cb();
 }
@@ -18,27 +20,35 @@ function func01(cb){
 //  }
 
 //輸出任務二
-function func02(cb){
+function func02(cb) {
     console.log('任務二');
     cb();
 }
 
 //輸出任務三
-function func03(cb){
+function func03(cb) {
     console.log('任務三');
     cb();
 }
 
-exports.order = series(func01 ,func02); //順序執行任務
-exports.paral = parallel(func01 ,func02); //並行任務
-exports.all = series(func01 , parallel(func02 ,func03));
+exports.order = series(func01, func02); //順序執行任務
+exports.paral = parallel(func01, func02); //並行任務
+exports.all = series(func01, parallel(func02, func03));
 
 
 // 搬檔案
-exports.moves =  function move(){
-   return src('move.html').pipe(dest('dest/'))
-} 
+exports.moves = function move() {
+    return src('move.html').pipe(dest('dest/'))
+}
 
+//合併檔案
+var concat = require('gulp-concat');
+
+exports.concatfile = function all() {
+
+    return src('css/*.css').pipe(concat('style.css')).pipe(dest('css/all/'))
+
+}
 
 
 

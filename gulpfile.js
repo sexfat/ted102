@@ -56,11 +56,12 @@ exports.concatfile = function all() {
 
 const cleanCSS = require('gulp-clean-css');
 
-exports.minicss = function minifycss(){
-    return src('css/all.css')
-    .pipe(cleanCSS())
-    .pipe(dest('css/minify'))
-} 
+exports.minicss = function minifycss(){ 
+    return src('css/*.css')  //來源檔案
+    .pipe(concat('style.css')) // 合併
+    .pipe(cleanCSS()) //壓縮
+    .pipe(dest('css/minify')) //放到該層目錄
+}
 
 
 

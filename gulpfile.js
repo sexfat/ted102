@@ -42,15 +42,25 @@ exports.moves = function move() {
 }
 
 //合併檔案
+//引入套件
 var concat = require('gulp-concat');
 
 exports.concatfile = function all() {
-
-    return src('css/*.css').pipe(concat('style.css')).pipe(dest('css/all/'))
-
+    return src('css/*.css')
+    .pipe(concat('style.css'))
+    .pipe(dest('css/all/'))
 }
 
+//minify css
+//引入套件
 
+const cleanCSS = require('gulp-clean-css');
+
+exports.minicss = function minifycss(){
+    return src('css/all.css')
+    .pipe(cleanCSS())
+    .pipe(dest('css/minify'))
+} 
 
 
 

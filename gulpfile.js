@@ -34,6 +34,13 @@ exports.paral = parallel(func01 ,func02); //並行任務
 exports.all = series(func01 , parallel(func02 ,func03));
 
 
+// 搬檔案
+exports.moves =  function move(){
+   return src('move.html').pipe(dest('dest/'))
+} 
+
+
+
 
 
 

@@ -69,10 +69,8 @@ var sass = require('gulp-sass');
 
 //編譯前的檔案位址
 var sourcemaps = require('gulp-sourcemaps');
-
-
 function sassStyle(){
-    return src('sass/*.scss')
+    return src('dev/sass/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
         outputStyle: "compressed"   // nested巢狀  // compressed壓縮  //expanded 原本
@@ -83,11 +81,22 @@ function sassStyle(){
     .pipe(dest('css/'))
 }
 
+// html template
+const fileinclude = require('gulp-file-include');
 
+function includeHTML() {
+    return src('dev/*.html')
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(dest('./'));
+}
 
 //監聽 scss
 exports.w = function watchfile(){
     watch('sass/*.scss' , sassStyle);
+    watch('dev/*.html' , includeHTML);
 }
 
 
@@ -97,7 +106,6 @@ exports.w = function watchfile(){
 
 
 
-// const fileinclude = require('gulp-file-include');
 
 
 
@@ -105,13 +113,3 @@ exports.w = function watchfile(){
 
 
 
-
-// exports.html =  function includeHTML(done) {
-//     return src('*.html')
-//         .pipe(fileinclude({
-//             prefix: '@@',
-//             basepath: '@file'
-//         }))
-//         .pipe(dest('./dist'));
-//     done();
-// }

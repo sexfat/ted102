@@ -67,12 +67,17 @@ exports.minicss = function minifycss(){
 //套件的引入
 var sass = require('gulp-sass');
 
+//編譯前的檔案位址
+var sourcemaps = require('gulp-sourcemaps');
+
+
 function sassStyle(){
     return src('sass/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass({
         outputStyle: "expanded"   // nested巢狀  // compressed壓縮  //expanded 原本
     }).on('error', sass.logError))
-    //.pipe(cleanCSS()) //壓縮css
+    .pipe(sourcemaps.write())
     .pipe(dest('css/'))
 }
 

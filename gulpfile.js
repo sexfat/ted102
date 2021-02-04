@@ -70,6 +70,7 @@ var sass = require('gulp-sass');
 function sassStyle(){
     return src('sass/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(cleanCSS()) //壓縮css
     .pipe(dest('css/'))
 }
 

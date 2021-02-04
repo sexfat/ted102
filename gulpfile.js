@@ -31,8 +31,7 @@ function func03(cb){
 
 exports.order = series(func01 ,func02); //順序執行任務
 exports.paral = parallel(func01 ,func02); //並行任務
-
-exports.all = series(func01 , parallel(func02 ,func03) );
+exports.all = series(func01 , parallel(func02 ,func03));
 
 
 

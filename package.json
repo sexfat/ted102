@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "安裝套件": "npm install",
+    "全部任務": "gulp all",
+    "並行任務": "gulp paral"
   },
   "author": "",
   "license": "ISC",

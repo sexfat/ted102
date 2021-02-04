@@ -95,7 +95,7 @@ function includeHTML() {
 
 //監聽 scss
 exports.w = function watchfile(){
-    watch('sass/*.scss' , sassStyle);
+    watch('dev/sass/*.scss' , sassStyle);
     watch('dev/*.html' , includeHTML);
 }
 

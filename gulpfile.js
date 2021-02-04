@@ -53,7 +53,6 @@ exports.concatfile = function all() {
 
 //minify css
 //引入套件
-
 const cleanCSS = require('gulp-clean-css');
 
 exports.minicss = function minifycss(){ 
@@ -62,6 +61,18 @@ exports.minicss = function minifycss(){
     .pipe(cleanCSS()) //壓縮
     .pipe(dest('css/minify')) //放到該層目錄
 }
+
+
+//sass 編譯
+//套件的引入
+var sass = require('gulp-sass');
+
+function sassStyle(){
+    return src('sass/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(dest('css/'))
+}
+
 
 
 

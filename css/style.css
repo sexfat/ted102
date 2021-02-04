@@ -1,4 +1,5 @@
 body {
-  background-color: #fff;
-}
-/*# sourceMappingURL=style.css.map */
+  background-color: #f20d0d; }
+  body p {
+    margin: 0;
+    padding: 10; }

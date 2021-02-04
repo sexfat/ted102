@@ -73,6 +73,12 @@ function sassStyle(){
     .pipe(dest('css/'))
 }
 
+//監聽 scss
+exports.w = function watchfile(){
+    watch('sass/*.scss' , sassStyle);
+}
+
+
 
 
 

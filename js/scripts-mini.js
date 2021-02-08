@@ -1,0 +1,1 @@
+var hiddenBox=$("#banner-message");function aa(n){return 10*n}$("#button-container button").on("click",function(n){hiddenBox.show()});

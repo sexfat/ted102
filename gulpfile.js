@@ -124,8 +124,10 @@ exports.babeljs = function es5(){
         presets: ['@babel/env']
     }))
     .pipe(dest('js'))
-
 }
+
+// 
+
 
 
 
@@ -142,8 +144,20 @@ function img(){
     // path.extname = '.js' ;
 }
 ))
-   .pipe(dest('images')) 
+   .pipe(dest('images/mini')) 
 }
+
+//  清除舊的檔案
+var clean = require('gulp-clean');
+
+
+function cleanfile(){
+   return src(['js' , 'css' , 'images/mini/*.*'], {read: false , allowEmpty: true})
+   .pipe(clean({
+      force: true 
+   })) 
+}
+
 
 //監聽 scss
 exports.w = function watchfile(){
@@ -151,8 +165,8 @@ exports.w = function watchfile(){
     watch('dev/*.html' , includeHTML);
 }
 
-// 打包 js /img
-exports.package = parallel(img , uglifyjs)
+//  清除js images css  -> 打包
+exports.package = series(cleanfile , parallel(img , uglifyjs))
 
 
 

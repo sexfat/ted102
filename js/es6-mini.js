@@ -1,0 +1,1 @@
+const callsomeone=o=>o+"做事情";console.log(callsomeone("小明"));

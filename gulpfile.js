@@ -93,6 +93,16 @@ function includeHTML() {
         .pipe(dest('./'));
 }
 
+// 壓縮js
+
+const uglify = require('gulp-uglify');
+
+exports.minijs = function uglifyjs(){
+   return src('dev/js/*.js')
+   .pipe(uglify())
+   .pipe(dest('js'))
+}
+
 //監聽 scss
 exports.w = function watchfile(){
     watch('dev/sass/*.scss' , sassStyle);

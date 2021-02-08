@@ -126,12 +126,6 @@ exports.babeljs = function es5(){
     .pipe(dest('js'))
 }
 
-// 
-
-
-
-
-
 
 // 壓縮圖片
 const imagemin = require('gulp-imagemin');

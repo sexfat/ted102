@@ -103,7 +103,6 @@ function includeHTML() {
 
 const uglify = require('gulp-uglify');
 
-
 exports.minijs = function uglifyjs(){
    return src('dev/js/*.js')
    .pipe(uglify())
@@ -114,6 +113,18 @@ exports.minijs = function uglifyjs(){
    ))
    .pipe(dest('js'))
 }
+
+
+// 壓縮圖片
+const imagemin = require('gulp-imagemin');
+
+exports.minimg = function img(){
+   return src('images/*.*')
+   .pipe(imagemin())
+   .pipe(dest('images/mini')) 
+}
+
+
 
 //監聽 scss
 exports.w = function watchfile(){

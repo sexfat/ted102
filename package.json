@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "安裝套件": "npm install",
-    "開發": "gulp w",
+    "開發": "gulp",
     "打包": "gulp package"
   },
   "author": "",

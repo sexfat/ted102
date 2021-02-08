@@ -162,7 +162,7 @@ var browserSync = require('browser-sync').create();
 const reload =  browserSync.reload;
 
 
-exports.browser = function browsersync(){
+exports.default = function browsersync(){
     browserSync.init({
         server: {
             baseDir: "./",

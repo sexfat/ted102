@@ -121,7 +121,12 @@ const imagemin = require('gulp-imagemin');
 exports.minimg = function img(){
    return src('images/*.*')
    .pipe(imagemin())
-   .pipe(dest('images/mini')) 
+   .pipe(rename(function(path){
+    path.basename += "-mini"
+    // path.extname = '.js' ;
+}
+))
+   .pipe(dest('images')) 
 }
 
 

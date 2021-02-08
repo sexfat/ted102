@@ -158,6 +158,23 @@ function cleanfile(){
    })) 
 }
 
+var browserSync = require('browser-sync').create();
+const reload =  browserSync.reload;
+
+
+exports.browser = function browsersync(){
+    browserSync.init({
+        server: {
+            baseDir: "./",
+            index : 'index.html'
+        }
+    });
+    watch('dev/sass/*.scss' , sassStyle).on('change' ,reload);
+    watch('dev/*.html' , includeHTML).on('change' ,reload);;
+} 
+
+
+
 
 //監聽 scss
 exports.w = function watchfile(){

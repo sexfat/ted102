@@ -1,5 +1,10 @@
 body {
    background-color: #f20d0d;
+   .wrapper_index {
+     margin: 0 auto;
+     max-width: 1200px; 
+     width: 100%;
+   }
    p {
     margin: 0;
     padding: 20;

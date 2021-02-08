@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all-mini.css">
     <title>首頁</title>
 </head>
 <body>
     <div class="index">
-        @@include('./layout/nav.html')
+        @@include('./layout/nav.html', {
+            "h1": "首頁選單",
+         })
+         <div class="wrapper_index">
+           <img src="./images/mini/bike-mini.jpg" alt="">
+         </div>
  
         @@include('./layout/footer.html')
     </div>

@@ -102,6 +102,8 @@ function includeHTML() {
 // 壓縮js
 
 const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
+
 
 function uglifyjs(){
    return src('dev/js/*.js')
@@ -113,6 +115,20 @@ function uglifyjs(){
    ))
    .pipe(dest('js'))
 }
+
+// es6 -> es5
+
+exports.babeljs = function es5(){
+    return src('dev/js/es6.js')
+    .pipe(babel({
+        presets: ['@babel/env']
+    }))
+    .pipe(dest('js'))
+
+}
+
+
+
 
 
 // 壓縮圖片

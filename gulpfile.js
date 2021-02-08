@@ -96,10 +96,16 @@ function includeHTML() {
 // 壓縮js
 
 const uglify = require('gulp-uglify');
+var rename = require("gulp-rename");
 
 exports.minijs = function uglifyjs(){
    return src('dev/js/*.js')
    .pipe(uglify())
+   .pipe(rename(function(path){
+       path.basename += "-mini";
+       path.extname = '.js' ;
+   }
+   ))
    .pipe(dest('js'))
 }
 

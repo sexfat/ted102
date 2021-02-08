@@ -158,6 +158,15 @@ function cleanfile(){
    })) 
 }
 
+//監聽 scss
+exports.w = function watchfile(){
+    watch('dev/sass/*.scss' , sassStyle);
+    watch('dev/*.html' , includeHTML);
+}
+
+
+
+//  browserSync  瀏覽器同步
 var browserSync = require('browser-sync').create();
 const reload =  browserSync.reload;
 
@@ -176,11 +185,7 @@ exports.default = function browsersync(){
 
 
 
-//監聽 scss
-exports.w = function watchfile(){
-    watch('dev/sass/*.scss' , sassStyle);
-    watch('dev/*.html' , includeHTML);
-}
+
 
 //  清除js images css  -> 打包
 exports.package = series(cleanfile , parallel(img , uglifyjs))

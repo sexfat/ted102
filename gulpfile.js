@@ -103,7 +103,7 @@ function includeHTML() {
 
 const uglify = require('gulp-uglify');
 
-exports.minijs = function uglifyjs(){
+function uglifyjs(){
    return src('dev/js/*.js')
    .pipe(uglify())
    .pipe(rename(function(path){
@@ -118,7 +118,7 @@ exports.minijs = function uglifyjs(){
 // 壓縮圖片
 const imagemin = require('gulp-imagemin');
 
-exports.minimg = function img(){
+function img(){
    return src('images/*.*')
    .pipe(imagemin())
    .pipe(rename(function(path){
@@ -129,13 +129,20 @@ exports.minimg = function img(){
    .pipe(dest('images')) 
 }
 
-
-
 //監聽 scss
 exports.w = function watchfile(){
     watch('dev/sass/*.scss' , sassStyle);
     watch('dev/*.html' , includeHTML);
 }
+
+// 打包 js /img
+exports.package = parallel(img , uglifyjs)
+
+
+
+
+
+
 
 
 

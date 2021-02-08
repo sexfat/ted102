@@ -66,6 +66,7 @@ exports.minicss = function minifycss(){
 //sass 編譯
 //套件的引入
 var sass = require('gulp-sass');
+var rename = require("gulp-rename");
 
 //編譯前的檔案位址
 var sourcemaps = require('gulp-sourcemaps');
@@ -78,6 +79,11 @@ function sassStyle(){
     .pipe(sourcemaps.write())
     .pipe(concat('all.css')) // 合併
     .pipe(cleanCSS()) //壓縮
+    .pipe(rename(function(path){
+        path.basename += "-mini";
+        path.extname = '.css' ;
+    }
+    ))//更名
     .pipe(dest('css/'))
 }
 
@@ -96,7 +102,7 @@ function includeHTML() {
 // 壓縮js
 
 const uglify = require('gulp-uglify');
-var rename = require("gulp-rename");
+
 
 exports.minijs = function uglifyjs(){
    return src('dev/js/*.js')

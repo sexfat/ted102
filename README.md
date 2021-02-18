@@ -6,3 +6,4 @@ https://hackmd.io/chvUZNWERLO0uD9bBoQKXw?view
 
 - webpack index.js -p 上線 
 - webpack index.js -d 開發
+- webpack index.js -w 監看

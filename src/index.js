@@ -11,7 +11,8 @@ $('body').css('background' , '#f25');
 TweenMax.to('.box' , 1 ,{
     x: 500,
     y : 100,
-    rotation : 360
+    rotation : 180,
+    backgroundColor : '#eee'
 })
 
 

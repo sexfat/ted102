@@ -1,7 +1,7 @@
 // node module
 const path = require('path');
 
-
+// 配置文件
 module.exports = {
     entry: './src/index.js',               // 入口文件
     output: {

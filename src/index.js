@@ -2,6 +2,8 @@ console.log('打包webpack');
 //套件引入
 import $ from "jquery";
 import { TweenMax } from "gsap";
+
+// css 引入
 import './style.css';
 
 // jquery
@@ -13,7 +15,7 @@ TweenMax.to('.box' , 1 ,{
     x: 500,
     y : 400,
     rotation : 180,
-    backgroundColor : '#eee'
+    backgroundColor : '#999'
 })
 
 

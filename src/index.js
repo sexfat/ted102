@@ -15,7 +15,7 @@ TweenMax.to('.box' , 1 ,{
     x: 500,
     y : 400,
     rotation : 180,
-    backgroundColor : '#999'
+    // backgroundColor : '#999'
 })
 
 

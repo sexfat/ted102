@@ -3,11 +3,14 @@ const path = require('path');
 
 // 配置文件
 module.exports = {
-    entry: './src/index.js',               // 入口文件
+    entry: {
+       main: './src/index.js',
+       about: './src/about.js',
+    }, // 入口文件
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
-      },           // 出口文件
+        filename: '[name].js'
+      }, // 出口文件  name -> chunkname main and about
       module: {
         rules: [{
             // 格式
@@ -19,7 +22,7 @@ module.exports = {
             ],
         }]
     },// 處裡對應模組
-    
+
     //plugins: [],             // 對應的插件
     //devServer: {},           // 服務器配置
     mode: 'development'     // "production" | "development" | "none"  開發模式 

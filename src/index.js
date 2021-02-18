@@ -4,7 +4,10 @@ import $ from "jquery";
 import { TweenMax } from "gsap";
 
 // css 引入
-import './style.css';
+// import './style.css';
+
+//scss 引入
+import './style.scss';
 
 // jquery
 $('body').css('background' , '#f25');

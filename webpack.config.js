@@ -1,12 +1,13 @@
 // node module
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // 配置文件
 module.exports = {
     entry: {
-       main: './src/index.js',
-       about: './src/about.js',
+        main: './src/index.js',
+        about: './src/about.js',
     }, // 入口文件
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -32,6 +33,12 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "./[name].css" // output 檔案名稱
+        }),
+        new HtmlWebpackPlugin({
+            chunks : ['main'],  //選擇注入資源 chunk
+            inject  : 'body', //預設<body> js </body>  head or body
+            template : './src/index.html',
+            filename : 'index.html'//目的地
         })
     ],// 對應的插件
     //devServer: {},           // 服務器配置

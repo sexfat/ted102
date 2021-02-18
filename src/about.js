@@ -1,2 +1,2 @@
 import { TweenMax } from "gsap";
-import './style.css';
+import './about.css';

@@ -2,4 +2,7 @@
 
 https://hackmd.io/chvUZNWERLO0uD9bBoQKXw?view
 
-# 環境的安裝
+# 指令
+
+- webpack index.js -p 上線 
+- webpack index.js -d 開發

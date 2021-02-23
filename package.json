@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "瀏覽器" : "webpack-dev-server"
+    "瀏覽器": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/sexfat/ted102#readme",
   "devDependencies": {
+    "@babel/core": "^7.13.1",
+    "@babel/preset-env": "^7.13.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.2",
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^1.3.7",

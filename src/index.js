@@ -19,7 +19,11 @@ TweenMax.to('.box' , 1 ,{
     y : 400,
     rotation : 360,
     // backgroundColor : '#999'
-})
+});
+
+const num = (a , b ) => a * b ;
+
+console.log(num(10 , 100));
 
 
 

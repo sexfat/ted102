@@ -2,6 +2,9 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {
+    CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 
 // 配置文件
 module.exports = {
@@ -27,10 +30,28 @@ module.exports = {
                 'css-loader',
                 'sass-loader'
             ],
-        }]
+        },
+        {
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
+
+            use: [{
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env']
+                }
+            }],
+            include: path.resolve(__dirname, 'src'),
+        },
+    ]
+
+        
 
     },// 處裡對應模組
     plugins: [
+         //清理舊的檔案
+        new CleanWebpackPlugin(),
+        // css
         new MiniCssExtractPlugin({
             filename: "./[name].css" // output 檔案名稱
         }),

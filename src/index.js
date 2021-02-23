@@ -1,6 +1,7 @@
 console.log('打包webpack');
 //套件引入
 // import $ from "jquery";
+import Vue from 'vue';
 import { TweenMax } from "gsap";
 
 // css 引入

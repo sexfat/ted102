@@ -61,12 +61,24 @@ module.exports = {
             template : './src/index.html',
             filename : 'index.html'//目的地
         }),
+        new HtmlWebpackPlugin({
+            chunks : ['about'],  //選擇注入資源 chunk
+            inject  : 'body', //預設<body> js </body>  head or body
+            template : './src/about.html',
+            filename : 'about.html'//目的地
+        }),
         //全域載入jq
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
           })
-    ],// 對應的插件
+    ],
+    //解決vue jquery 路徑
+    resolve: {
+        alias: {
+           vue: 'vue/dist/vue.js'
+        }
+      },
     devServer: {
         contentBase: './dist',
         host: 'localhost',

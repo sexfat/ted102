@@ -22,9 +22,20 @@ TweenMax.to('.box' , 1 ,{
     // backgroundColor : '#999'
 });
 
+
+// es6 -> 5
 const num = (a , b ) => a * b ;
 
 console.log(num(40 , 10));
+
+new Vue({
+   el : '#app' ,
+   data : {
+      message : 'vue' 
+   }
+})
+
+
 
 
 

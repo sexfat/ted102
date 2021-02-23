@@ -10,7 +10,7 @@ import { TweenMax } from "gsap";
 import './style.scss';
 
 // jquery
-$('body').css('background' , '#f25');
+$('body').css('background' , '#333');
 
 
 //gsap
@@ -23,7 +23,7 @@ TweenMax.to('.box' , 1 ,{
 
 const num = (a , b ) => a * b ;
 
-console.log(num(10 , 100));
+console.log(num(40 , 10));
 
 
 

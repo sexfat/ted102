@@ -17,7 +17,8 @@ module.exports = {
         filename: '[name].js'
       }, // 出口文件  name -> chunkname main and about
       module: {
-        rules: [{
+        rules: [
+        {
             // 格式
             test: /\.(sass|scss|css)$/,
             //順序是由下到上 sass > css > style
@@ -44,9 +45,6 @@ module.exports = {
             include: path.resolve(__dirname, 'src'),
         },
     ]
-
-        
-
     },// 處裡對應模組
     plugins: [
          //清理舊的檔案

@@ -1,6 +1,6 @@
 console.log('打包webpack');
 //套件引入
-import $ from "jquery";
+// import $ from "jquery";
 import { TweenMax } from "gsap";
 
 // css 引入
@@ -10,7 +10,7 @@ import { TweenMax } from "gsap";
 import './style.scss';
 
 // jquery
-$('body').css('background' , '#333');
+$('body').css('background' , '#eee');
 
 
 //gsap

@@ -6,6 +6,8 @@ const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
 
+const webpack  = require('webpack');
+
 // 配置文件
 module.exports = {
     entry: {
@@ -58,7 +60,12 @@ module.exports = {
             inject  : 'body', //預設<body> js </body>  head or body
             template : './src/index.html',
             filename : 'index.html'//目的地
-        })
+        }),
+        //全域載入jq
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+          })
     ],// 對應的插件
     devServer: {
         contentBase: './dist',
